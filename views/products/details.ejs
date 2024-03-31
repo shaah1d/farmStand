@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= foundProduct.name %></title> <!-- Uoutput the value -->
+</head>
+<body>
+    <h1>Product details</h1>
+
+    <h2><%= foundProduct.name %></h2>
+    <ul>
+        <li>price: <%= foundProduct.price %></li>
+        <li>category: <%= foundProduct.category %></li>
+    </ul> <!-- Use o output the value -->
+    <a href="/products">Home page</a>
+    <a href="/products/<%=foundProduct._id %>/edit">Edit</a>
+    <form action="/products/<%=foundProduct._id%>?_method=DELETE" method="POST">
+    <button>Delete</button></form>
+
+
+</body>
+</html>
